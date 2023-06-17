@@ -16,6 +16,7 @@ import {
     SSAOPlugin,
     BloomPlugin,
     GammaCorrectionPlugin,
+    addBasePlugins,
     CanvasSnipperPlugin,
     mobileAndTabletCheck,
 
@@ -47,12 +48,12 @@ function WebgiViewer() {
         // await viewer.addPlugin(SSAOPlugin)
         // await viewer.addPlugin(BloomPlugin)
 
-
+        await addBasePlugins(viewer);
         await viewer.addPlugin(CanvasSnipperPlugin);
         viewer.renderer.refreshPipeline();
         await manager.addFromPath("scene-black.glb");
 
-        // viewer.getPlugin(TonemapPlugin).config.clipBackground = true;
+        viewer.getPlugin(TonemapPlugin).config.clipBackground = true;
 
         // viewer.scene.activeCamera.setCameraOptions({ controlsEnabled: false });
 
