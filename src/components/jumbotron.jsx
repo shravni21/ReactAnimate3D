@@ -20,10 +20,10 @@ function Jumbotron() {
             <h2 className='title'>New</h2>
             <img classname='logo' src={Iphone} alt="iPhone 14 and iPhone 14 Plus" />
             <p className='text'>Big and Bigger</p>
-            <span className="description">From ₹79900.00* before trade‑in</span>
+            <span className="description">From ₹79900.00* before trade-in</span>
             <ul className="links">
                 <li>
-                    <button classname='button'>Buy</button>
+                    <button className="button">Buy</button>
                 </li>
                 <li>
                     <a className="link" onClick={handleLearnMore}>Learn More</a>
@@ -31,7 +31,7 @@ function Jumbotron() {
                 </li>
 
             </ul>
-            <img classname='iphone-img' src={HoldingIphone} alt="I=phone" />
+            <img className='iphone-img' src={HoldingIphone} alt="I=phone" />
         </div>
 
     );
