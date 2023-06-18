@@ -8,6 +8,7 @@ import { useRef } from "react"
 
 function App() {
   const WebgiViewerRef = useRef();
+  const contentRef = useRef();
   const handlePreview = () => {
     WebgiViewerRef.current.triggrPreview();
   }
@@ -15,11 +16,13 @@ function App() {
 
   return (
     <div className="App">
-      <Nav />
-      <Jumbotron />
-      <SoundSection />
-      <DisplaySection triggrPreview={handlePreview} />
-      <WebgiViewer ref={WebgiViewerRef} />
+      <div ref={contentRef} id="content">
+        <Nav />
+        <Jumbotron />
+        <SoundSection />
+        <DisplaySection triggrPreview={handlePreview} />
+      </div>
+      <WebgiViewer contentRef={contentRef} ref={WebgiViewerRef} />
     </div>
   );
 }
