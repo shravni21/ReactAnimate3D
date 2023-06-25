@@ -1,5 +1,5 @@
 import React from "react";
-import Iphone from "../assets/images/iphone-14.png"
+import Iphone from "../assets/images/iphone-14.jpg"
 import HoldingIphone from '../assets/images/iphone-hand.png'
 function Jumbotron() {
     const handleLearnMore = () => {
@@ -18,8 +18,8 @@ function Jumbotron() {
     return (
         <div className="jumbotron-section wrapper" >
             <h2 className='title'>New</h2>
-            <img classname='logo' src={Iphone} alt="iPhone 14 and iPhone 14 Plus" />
-            <p className='text'>Big and Bigger</p>
+            <img classname='logo' src={Iphone} alt="iPhone 14 Plus" />
+            <p className='text'>Big and bigger</p>
             <span className="description">From ₹79900.00* before trade-in</span>
             <ul className="links">
                 <li>
