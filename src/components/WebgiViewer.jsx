@@ -16,6 +16,8 @@ import {
     SSAOPlugin,
     BloomPlugin,
     GammaCorrectionPlugin,
+    // addBasePlugins,
+    // CanvasSnipperPlugin,
     mobileAndTabletCheck,
 
 
@@ -38,6 +40,8 @@ const WebgiViewer = forwardRef((props, ref) => {
     const [positionRef, setPositionRef] = useState(null);
     const canvasContainerRef = useRef(null);
     const [previewMode, setPreviewMode] = useState(false);
+    const [isMobile, setIsMobile] = useState(null);
+
 
     useImperativeHandle(ref, () => ({
         triggrPreview() {
